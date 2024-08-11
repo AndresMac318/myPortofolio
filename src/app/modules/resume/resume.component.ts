@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './resume.component.html',
   styleUrl: './resume.component.scss'
 })
-export class ResumeComponent {
+export default class ResumeComponent {
 
 }

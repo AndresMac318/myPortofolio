@@ -1,1 +1,71 @@
-<p>header works!</p>
+<!-- <header class="header"> -->
+<!-- <nav class="header__nav nav" [class.header__nav--active]="navActive"> -->
+
+<nav class="nav">
+  <div class="nav__logo">Logo</div>
+
+  <div class="nav__hamburguer" (click)="toggleMenu()">
+    <div class="nav__hamburguer--line"></div>
+    <div class="nav__hamburguer--line"></div>
+    <div class="nav__hamburguer--line"></div>
+  </div>
+
+  <ul [class]="toggle">
+    <li class="nav__li">
+      <a
+        class="nav__a"
+        (click)="toggleMenu()"
+        routerLink=""
+        routerLinkActive="nav__a--active"
+        fragment="home"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
+    </li>
+    <li class="nav__li">
+      <a
+        class="nav__a"
+        (click)="toggleMenu()"
+        routerLink=""
+        routerLinkActive="nav__a--active"
+        fragment="works"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Works</a
+      >
+    </li>
+    <li class="nav__li">
+      <a
+        class="nav__a"
+        (click)="toggleMenu()"
+        routerLink=""
+        routerLinkActive="nav__a--active"
+        fragment="resume"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Resume</a
+      >
+    </li>
+    <li class="nav__li">
+      <a
+        class="nav__a"
+        (click)="toggleMenu()"
+        routerLink=""
+        routerLinkActive="nav__a--active"
+        fragment="skills"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Skills</a
+      >
+    </li>
+    <li class="nav__li">
+      <a
+        class="nav__a"
+        (click)="toggleMenu()"
+        routerLink=""
+        routerLinkActive="nav__a--active"
+        fragment="contact"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Contact</a
+      >
+    </li>
+  </ul>
+</nav>
+<!-- </header> -->

@@ -1,0 +1,125 @@
+
+.nav {
+    width: 100%;
+    height: 60px;
+    background: -webkit-linear-gradient(90deg, #140c1c,#1e064b,#2a1454);/* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(90deg, #140c1c,#1e064b,#2a1454);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(90deg, #140c1c, #140c1c, rgb(39, 21, 53));
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+
+    &__logo {
+        font-size: 2.4rem;
+        font-weight: bold;
+        color: #FEFEFE;
+    }
+
+    &__hamburguer {
+        display: block;
+        cursor: pointer;
+
+        &--line {
+            width: 30px;
+            height: 3px;
+            background: #FEFEFE;
+            margin: 6px 0;
+        }
+    }
+    
+    &__menu {
+        height: 0px;
+        display: none;
+        top: 60px;
+
+        width: 100vw;
+        background: #2a1454;
+        // transition: height 0.8s ease-in-out;
+    }
+
+    &__menu--active {
+        height: 440px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+
+        background: #2a1454;
+
+
+
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        padding: 60px;
+        z-index: 999;
+        // transition: height 0.8s ease-in-out;
+    }
+
+    // &__li {}
+
+    &__a {
+        color: #FEFEFE;
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        padding: 10px 25px;
+        border-radius: 50px;
+        margin: 5px;
+        text-align: center;
+        transition: background 0.3s ease-in-out;
+        &:hover {
+            // color:#2a1454;
+            // background: #FEFEFE;
+            color:#fefefe;
+            // background: #FEFEFE;
+        }
+    }
+
+    &__a--activew {
+        color:#2a1454;
+        background: #FEFEFE;
+    }
+}
+
+
+
+@media only screen and (width > 768px) {
+
+    .nav {
+        display: flex;
+        position: static;
+        height: 60px;
+
+        &__hamburguer {
+            display: none;
+        }
+
+        &__menu {
+            height: 60px;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            position: static;
+            background: transparent;
+        }
+        &__menu--active {
+            flex-flow: row wrap;
+            height: 60px;
+            width: fit-content;
+            align-items: center;
+            position: static;
+            background: transparent;
+            padding: 0px;
+        }
+        &__a {
+            margin: 0 5px;
+            padding: 0 25px; 
+        }
+    }
+
+}
