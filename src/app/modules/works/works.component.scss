@@ -1,107 +1,104 @@
+.works {
+  background: #0f0715;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 
-.works {  
-    // background: #2a1454;
-    // background: rgb(2, 0, 36);
-    // background: #140c1c;
-    background: #0f0715;
+  // background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(42,18,84,1) 100%);
+  // height: 760px;  !al estableccer heigth se desborda en x
 
-    // background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(42,18,84,1) 100%);
-    // width: 100%;
-    
-    // width: 100%;
-    // background: #2a1454;
-    
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-
-    // background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(42,18,84,1) 100%);
-    // height: 760px;  !al estableccer heigth se desborda en x
-    
-    // border: solid 1px red;
-    width: 100%;
+  // border: solid 1px red;
+  width: 100%;
+  // margin: auto;
 }
 
 .works__container {
-    // margin: 20px auto;
-    flex-basis: 1440px;
-    display: flex;
-    flex-flow: column wrap;
-    align-content: center;
-    width: 100%;
-    // max-width: 1440px;
-    padding: 30px;
-
-    // border: solid 1px yellow;
+  flex-basis: 1440px;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 30px;
 }
 
 .works__title {
-    background-image: linear-gradient(to right, #8750f7 0%, #ffffff 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font: 700 3rem/1.2 sans-serif;
-    margin: 0 auto 40px;
+  background-image: linear-gradient(to right, #8750f7 0%, #ffffff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font: 700 3rem/1.2 sans-serif;
+  margin: 0 auto 40px;
 }
 
 .works__menu {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    // background: #2a1454;
-    // background: #0f0715;
-    background: #050709;
-    border-radius: 20px;
-    margin: 0 0 40px;
-    padding: 4px 6px;
-    max-width: 400px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background: #050709;
+  border-radius: 20px;
+  margin: 0 0 40px;
+  padding: 4px 6px;
+  max-width: 400px;
 }
 
 .works__item {
-    // flex-shrink: 1;
-    font-size: 1.4rem;
-    color: #ffffff;
-    font-weight: 500;
-    padding: 6px 8px;
-    cursor: pointer;
-    border-radius: 18px;
-    background: transparent;
-    transition: background 0.3s ease-out;
-    &:hover {
-        background: #ffffff;
-        color: #2a1454;
-        
-    }
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 6px 8px;
+  cursor: pointer;
+  border: none;
+  border-radius: 18px;
+  background: transparent;
+  transition: background 0.3s ease-out;
+  &:hover {
+    background: #ffffff;
+    color: #2a1454;
+  }
+  &:active {
+    background: #ffffff;
+    color: #2a1454;
+  }
+  &:focus-within {
+    background: #ffffff;
+    color: #2a1454;
+  }
 }
 
 .works__containercards {
-    // flex-shrink: 1;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+  width: 100%;
+}
+
+@media only screen and (width >= 490px) {
+
+  .works__menu {
+    margin: 0 auto 40px;
+  }
+
+  .works__containercards {
+    justify-content: center;
     width: 100%;
+  }
 }
 
-.works__card {
-    flex-basis: 300px;
-    // flex: 1 1 300px;
-    // flex-shrink: 1;
-    // width: 100%;
-    height: 250px;
-    background: #2a1454;
-    border-radius: 20px;
+@media only screen and (width > 760px) {
+
+  .works__menu {
+    margin: 0 auto 40px;
+  }
+
+  .works__containercards {
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 100%;
+  }
 }
 
-@media only screen and (width >= 768px) {
-    // .works__container {}
 
-    .works__menu {
-        margin: 0 auto 40px;
-    }
-
-    .works__containercards {
-        justify-content: center;
-        flex-flow: row nowrap;
-        width: 100%;
-    }
+@media only screen and (width > 1370px) {
+  
 }

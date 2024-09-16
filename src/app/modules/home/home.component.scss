@@ -6,7 +6,7 @@
     //background: linear-gradient(90deg, #140c1c,#1e064b,#2a1454); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+                                              
     
     background: #2a1454;
-    height: 755px;
+    // height: 755px;
     background: rgb(2, 0, 36);
     
     // background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(42,18,84,1) 100%);
@@ -18,11 +18,12 @@
 .section__container {
     display: flex;
     flex-flow: column nowrap;
+    // padding: 60px 0 0 0;
 }
 
 .card {
     width: 100%;
-    padding: 30px;
+    padding: 90px 30px 30px;
     flex: content;
 }
 
@@ -159,7 +160,7 @@ figure {
     }
     .card {
         width: 60vw;
-        padding: 70px 0 50px 50px;
+        padding: 100px 0 50px 50px;
     }
     .card__text {
         padding: 0;

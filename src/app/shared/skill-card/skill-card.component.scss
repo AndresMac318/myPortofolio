@@ -1,0 +1,36 @@
+.skills__card {
+    // flex-basis: 140px;
+    // flex: 1 1 300px;
+    // flex-shrink: 1;
+    // width: 100%;
+    // height: 250px;
+    width: 180px;
+    // background: #2a1454;
+
+    border-radius: 20px;
+    text-align: center;
+}
+
+.skills__iconcontainer {
+    background: #140c1c;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 0 12px 0px;
+    border: solid 1px #140c1c;
+    transition: background 0.3s ease-in-out;
+    &:hover {
+        border: solid 1px #8750f7;
+        // box-shadow: #8750f7;
+        background: #381f6b;
+    }
+}
+
+.skills__number {
+    color: #747779;
+    font-size: 2rem;
+}
+
+.skills__nameskill {
+    color: #8750f7;
+    font-size: 1.6rem;
+}

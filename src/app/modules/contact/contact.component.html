@@ -1,1 +1,89 @@
-<p>contact works!</p>
+<section class="contact">
+  <div class="contact__container">
+    <div class="contact__info">
+      <h3>Click me!</h3>
+      <ul>
+        <li>
+          <div>
+            <img src="../../../assets/icons/whatsapp.svg" alt="cellphone" />
+          </div>
+          <div>
+            <p>Celular</p>
+            <a href="tel:+57-322-462-5438">+57 322 462 5438</a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <img src="../../../assets/icons/mail.svg" alt="" />
+          </div>
+
+          <div>
+            <p>Email</p>
+            <a href="mailto:andres98belt@gmail.com"
+              >andres98belt&#64;gmail.com</a
+            >
+          </div>
+        </li>
+        <li>
+          <div>
+            <img src="../../../assets/icons/location.svg" alt="" />
+          </div>
+          <div>
+            <p>País</p>
+            <a href="https://maps.app.goo.gl/XTzgBdj22GBUizaG6" target="_blank"
+              >Colombia</a
+            >
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <form
+      class="contact__form"
+      action="javascript:void(0)"
+      [formGroup]="contactForm"
+      (ngSubmit)="sendForm()">
+      <h3 class="contact__title">¡Trabajemos juntos!</h3>
+      <p class="contact__text">
+        Con mis habilidades y tus ideas descubramos grandiosas soluciones!
+      </p>
+      <input
+        formControlName="name"
+        name="name"
+        class="contact__input"
+        type="text"
+        placeholder="Nombres" />
+      <input
+        formControlName="email"
+        name="email"
+        class="contact__input"
+        type="text"
+        placeholder="Email" />
+      <input
+        formControlName="cellphone"
+        name="cellphone"
+        class="contact__input"
+        type="text"
+        placeholder="Nro. de celular" />
+      <textarea
+        formControlName="message"
+        name="message"
+        class="contact__input"
+        type="text"
+        style="height: auto"
+        rows="3"
+        placeholder="Mensaje"></textarea>
+      <button class="contact__button" type="submit">Enviar</button>
+
+      @if (successSend) {
+        <p class="contact__message">Tu mensaje a sido enviado!</p>
+      }
+      @if (errorSend) {
+        <p class="contact__message--error">
+          Error in your message, has not been sent!
+        </p>
+      }
+      <!-- <p>Thank you for your message. It has been sent.</p> -->
+    </form>
+  </div>
+</section>

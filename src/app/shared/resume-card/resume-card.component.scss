@@ -1,0 +1,49 @@
+.resumecard {
+    flex-basis: 120px;
+    // flex: 1 1 300px;
+    // flex-shrink: 1;
+    // width: 100%;
+    // height: 250px;
+    // background: #2a1454;
+    background: #140c1c;
+    border: 1px solid #140c1c;
+    border-radius: 20px;
+    padding: 20px 30px;
+    transition: all 0.3s ease-in-out;
+    
+    &__time {
+        color: #8750f7;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0 8px 0 0;
+    }
+    &__title{
+        color: #ffffff;
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__text{
+        color: #dddddd;
+        font-size: 1.6rem;
+    }
+
+   &:hover {
+    // background: linear-gradient(.25turn, #8750f7, #140c1c);
+    background: linear-gradient(45deg, #8750f7, #140c1c);
+    border: 1px solid #8750f7;
+    .resumecard__time {
+        color: #ffffff;
+    
+    }
+   }
+}
+
+/* .resumecard:hover {
+    background: linear-gradient(.25turn, #8750f7, #140c1c);
+    border: 1px solid #8750f7;
+    .resumecard__time {
+        color: #ffffff;
+    
+    }
+} */

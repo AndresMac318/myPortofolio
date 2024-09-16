@@ -6,6 +6,7 @@ import WorksComponent from './modules/works/works.component';
 import ResumeComponent from './modules/resume/resume.component';
 import SkillsComponent from './modules/skills/skills.component';
 import ContactComponent from './modules/contact/contact.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import ContactComponent from './modules/contact/contact.component';
   imports: [
     RouterOutlet, 
     HeaderComponent,
+    FooterComponent,
     HomeComponent,
     WorksComponent,
     ResumeComponent,

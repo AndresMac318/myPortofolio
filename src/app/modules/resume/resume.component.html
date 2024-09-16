@@ -3,8 +3,11 @@
     <h3 class="resume__title">Mi Experiencia</h3>
 
     <div class="resume__containercards">
-      <div class="resume__card">RanckCV</div>
-      <div class="resume__card">Innoversoft</div>
+      @for (item of experienceData; track item.id) {
+        <app-resume-card [cardInfo]="item"></app-resume-card>
+      } @empty {
+        <li>There are no items.</li>
+      }
     </div>
   </div>
 
@@ -12,8 +15,11 @@
     <h3 class="resume__title">Mi Educación</h3>
 
     <div class="resume__containercards">
-      <div class="resume__card">Ingeniero de Sistemas</div>
-      <div class="resume__card">Angular Avanzado</div>
+      @for (item of educationData; track item.id) {
+        <app-resume-card [cardInfo]="item"></app-resume-card>
+      } @empty {
+        <li>There are no items.</li>
+      }
     </div>
   </div>
 </section>

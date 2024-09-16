@@ -1,0 +1,200 @@
+
+.contact {  
+   
+    // background: linear-gradient(45deg, rgb(15, 7, 21) 15%,      rgb(39, 21, 53) 65%, rgb(15, 7, 21) 94%);
+    background: #0f0715;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+
+    // border: solid 1px red;
+    width: 100%;
+}
+
+.contact__container {
+    // margin: 20px auto;
+    // flex-basis: 1440px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    width: 100%;
+    // max-width: 1440px;
+    padding: 30px 20px 70px;
+
+    // border: solid 1px yellow;
+}
+
+.contact__info {
+    h3 {
+        font-size: 3rem;
+        color: #ffffff;
+        margin: 0 0 20px 0;
+    }
+    ul > li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 20px 0;
+    }
+    p {
+        color: #ffffff;
+        font-size: 1.6rem;
+    }
+    a {
+        color: #ffffff;
+        font-size: 1.8rem;
+        transition: color 0.2s ease;
+    }
+    a:hover {
+        color: #8750f7;
+    }
+}
+
+.contact__title {
+    background-image: linear-gradient(to right, #8750f7 0%, #ffffff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font: 700 3rem/1.2 sans-serif;
+    margin: 0 auto 20px;
+}
+
+.contact__text {
+    color: #dddddd;
+    font: 400 2rem/1.2 sans-serif;
+    margin: 0 auto 30px auto;
+}
+
+.contact__menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    background: #2a1454;
+    // background: #0f0715;
+    border-radius: 20px;
+    margin: 0 0 40px;
+    padding: 4px 6px;
+    max-width: 400px;
+}
+
+.contact__item {
+    // flex-shrink: 1;
+    font-size: 1.4rem;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 6px 8px;
+    cursor: pointer;
+    border-radius: 18px;
+    background: transparent;
+    transition: background 0.3s ease-out;
+    &:hover {
+        background: #ffffff;
+        color: #2a1454;
+        
+    }
+}
+
+.contact__info {
+    padding: 10px 0 50px;
+}
+
+.contact__form {
+    // flex-shrink: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 20px;
+    background: #140c1c;
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px 20px 0;
+    // margin: 0 0 40px 0;
+}
+
+.contact__input {
+    width: 100%;
+    height: 54px;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background: #050709;
+    border: 1px solid #22272c;
+    color: #ffffff;
+    outline: none;
+    &:focus {
+        border: 1px solid #8750f7;
+        caret-color: #8750f7;
+    }
+}
+
+.contact__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 54px;
+    width: 120px;
+    // padding: 8px 10px;
+    // margin-right: 20px;
+    border-radius: 30px;
+    background: #8750f7;
+    color: #ffffff;
+    border: solid #8750f7 1px;
+    transition: transform 0.2s;
+    font-weight: 600;
+
+    font-size: 1.5rem;
+    margin: 0 0 20px;
+
+    &:hover {
+        color: #ffffff;
+        font-weight: 600;
+        background: linear-gradient(0deg, #1e064b, #060010);
+        cursor: pointer;
+        transform: scale(1.1, 1.1);
+
+        a {
+            color: #ffffff;
+        }
+        
+        svg {
+            path {
+                fill: #ffffff;
+            }
+        }
+    }
+}
+
+.contact__message {
+    text-align: left;
+    font-size: 1.8rem;
+    color: #ffffff;
+    border: 1px solid green;
+    background: linear-gradient(150deg, rgb(15, 7, 21) 61%, #145425);
+    border: 1px solid #145425;
+    padding: 12px 20px;
+    margin: 0 0 20px;
+    border-radius: 20px;
+}
+
+@media screen and (width >= 668px) {
+
+    .contact__container {
+        flex-flow: row nowrap;
+        width: 100%;
+        // max-width: 1440px;
+        padding: 70px 20px 70px;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+    .contact__form {
+        width: 60%;
+    }
+
+    // .contact__info {
+    //     // align-self: center;
+    // }
+    
+}
+
+

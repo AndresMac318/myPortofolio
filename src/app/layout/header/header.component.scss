@@ -4,13 +4,23 @@
     height: 60px;
     background: -webkit-linear-gradient(90deg, #140c1c,#1e064b,#2a1454);/* Chrome 10-25, Safari 5.1-6 */
     // background: linear-gradient(90deg, #140c1c,#1e064b,#2a1454);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(90deg, #140c1c, #140c1c, rgb(39, 21, 53));
+    background: linear-gradient(90deg, #140c1c, #140c1c, rgba(39, 21, 53, 0.8));
 
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
+    // backdrop-filter: blur(6px);
+
+    //bluur
+    // background: rgba(42, 20, 84, 0.8);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    // border: 1px solid rgba(42, 20, 84, 0.8);
+    /* position: fixed;
+    width: 100%;
+    z-index: 333; */
 
     &__logo {
         font-size: 2.4rem;
@@ -48,10 +58,9 @@
         right: 0;
         width: 100vw;
 
-        background: #2a1454;
-
-
-
+        // background: #2a1454;
+        background: rgba(49 6 83 / 94%);
+        backdrop-filter: blur(16px);
         display: flex;
         flex-flow: column wrap;
         align-content: center;

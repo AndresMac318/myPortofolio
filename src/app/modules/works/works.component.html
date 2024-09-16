@@ -1,14 +1,21 @@
 <section class="works">
   <div class="works__container">
     <h3 class="works__title">Mis Trabajos Recientes</h3>
-    <ul class="works__menu">
-      <li class="works__item">Todos</li>
-      <li class="works__item">Angular</li>
-      <li class="works__item">SpringBoot</li>
-    </ul>
+    <div class="works__menu">
+      <button (click)="filterworks('all')" class="works__item">Todos</button>
+      <button (click)="filterworks('Angular')" class="works__item">
+        Angular
+      </button>
+      <button (click)="filterworks('SpringBoot')" class="works__item">
+        SpringBoot
+      </button>
+    </div>
     <div class="works__containercards">
-      <div class="works__card">RanckCV</div>
-      <div class="works__card">Innoversoft</div>
+      @for (work of worksFilter; track work.id) {
+        <app-works-card [cardInfo]="work"></app-works-card>
+      } @empty {
+        <p>No hay elementos que mostrar.</p>
+      }
     </div>
   </div>
 </section>
