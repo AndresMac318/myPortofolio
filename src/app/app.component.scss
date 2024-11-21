@@ -1,5 +1,16 @@
+.content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    main {
+        flex: 1 0;
+    }
+    app-footer {
+        flex: 0;
+    }
+}
 app-header{
-    position: fixed;
+    position: static;
     width: 100%;
     z-index: 333;
 }

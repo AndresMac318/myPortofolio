@@ -1,29 +1,25 @@
 import { Routes } from '@angular/router';
+// import AppComponent from './app.component';
 
 export const routes: Routes = [
     {
-        path: 'home',
-        loadComponent: () => import('./modules/home/home.component'),
-    },
-    {
-        path: 'works', 
-        loadComponent: () => import('./modules/works/works.component')
-    },
-    {
-        path: 'resume', 
-        loadComponent: () => import('./modules/resume/resume.component')
-    },
-    {
-        path: 'skills', 
-        loadComponent: () => import('./modules/skills/skills.component')
-    },
-    {
-        path: 'contact', 
-        loadComponent: () => import('./modules/contact/contact.component')
-    },
-    {
         path: '',
-        redirectTo: 'portfolio',
+        redirectTo: '/home',
+        pathMatch: 'full',
+        // loadComponent: () => import('./app.component'),
+        
+    },
+    {
+        path: 'home',
+        loadComponent: () => import('./layout/main/main.component'),
+    },
+    {
+        path: 'works/:name', 
+        loadComponent: () => import('./modules/works/works-detail/works-detail.component')
+    },
+    {
+        path: '**',
+        redirectTo: 'home',
         pathMatch: 'full'
     }
     

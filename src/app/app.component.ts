@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./layout/header/header.component";
-import HomeComponent from './modules/home/home.component';
-import WorksComponent from './modules/works/works.component';
-import ResumeComponent from './modules/resume/resume.component';
-import SkillsComponent from './modules/skills/skills.component';
-import ContactComponent from './modules/contact/contact.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
 @Component({
@@ -15,16 +10,12 @@ import { FooterComponent } from './layout/footer/footer.component';
     RouterOutlet, 
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
-    WorksComponent,
-    ResumeComponent,
-    SkillsComponent,
-    ContactComponent
+    
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnInit {
+export default class AppComponent implements OnInit {
   title = 'myportfolio';
 
   constructor( private activatedRoute: ActivatedRoute ){}

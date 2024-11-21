@@ -1,0 +1,147 @@
+.worksdetail {
+    &__header {
+        position: relative;
+        width: 100%;
+        height: 150px;
+
+        // background-image: url('../../../../assets/img/macbook-wallpaper-sm.jpg');
+        background-image: linear-gradient(rgb(49 6 83 / 75%), #2a145461), url('../../../../assets/img/macbook-wallpaper-sm.jpg');;
+        background-repeat: no-repeat;
+        background-position: 20% 90%;
+        background-size: 105%;
+
+    }
+    &__title {
+        font-size: 3rem;
+        color: #fff;    
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+.card__containerbtn {
+    display: flex;
+    gap: 12px;
+    margin: 0 0 20px 0;
+}
+
+.card__btnsocialnetwork {
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+
+    height: 40px;
+    width: 40px;
+    // padding: 8px 10px;
+    // margin-right: 20px;
+    border-radius: 50%;
+    background: transparent;
+    color: #8750f7;
+    border: solid #8750f7 1px;
+    transition: background 0.3s;
+
+    /* a {
+        font: 400 1.5rem/15 sans-serif;
+        letter-spacing: 1px;
+        color: #8750f7;
+    } */
+
+    &:hover {
+        color: #ffffff;
+        font-weight: 600;
+        background: #8750f7;
+        cursor: pointer;
+
+        a {
+            color: #ffffff;
+        }
+        
+        svg {
+            path {
+                fill: #ffffff;
+            }
+        }
+    }
+}
+
+.content{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+    justify-content: space-between;
+    &__image {
+        width: 100%;
+        height: 220px;
+        border-radius: 10px;
+        border: 1px solid #8750f7;
+        margin: 0 0 20px;
+    }
+    &__info {
+        width: 100%;
+        flex: 1 0 100%;
+    }
+    &__title {
+        font-size: 3rem;
+        line-height: 1.2;
+        color: #ffffff;
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+    &__text {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        color: #dddddd;
+        margin: 0 0 20px 0;
+    }
+    &__list {
+        display: flex;
+        margin: 0 0 20px 0;
+    } 
+    &__listgroup{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+    }
+    &__listgroup--tech {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+    &__item {
+        color: #dddddd;
+        margin: 0 8px;
+        font-size: 1.6rem;
+    }
+    &__item--gray {
+        color: #ffffff;
+        margin: 0 8px;
+        font-size: 1.8rem;
+    }
+    &__item--tech {
+        color: #fff;
+        background-color: transparent;
+        border: solid 1px #8750f7;
+        border-radius: 20px;
+        padding: 6px 10px;
+        margin: 0 8px 10px;
+        font-size: 1.8rem;
+    }
+
+}
+
+@media screen and (width > 600px) {
+    .content{
+        &__info {
+            flex: 0 0 60%;
+        }
+        &__list {
+            //width: 25%;
+            justify-content: space-evenly;
+        }
+    }
+    
+}

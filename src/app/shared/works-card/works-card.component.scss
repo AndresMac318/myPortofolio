@@ -30,6 +30,7 @@
 }
 
 .workscard__content {
+    display: flex;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -38,6 +39,7 @@
     background: linear-gradient(90deg,#8750f7, #140c1c);
     transform: translateY(90px);
     transition: transform 400ms ease;
+    cursor: pointer;
 }
 
 .workscard__title {
@@ -63,4 +65,11 @@
         width: 340px;
         height: 180px;
     }
+}
+
+img {
+    height: 30px;
+    width: 30px;
+    transform: rotate(90deg);
+    color: #ffffff;
 }

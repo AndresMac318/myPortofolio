@@ -62,7 +62,6 @@ export default class ContactComponent implements OnInit {
     
     return this.contactForm.reset();
     
-    
   }
   
 }
