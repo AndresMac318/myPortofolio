@@ -1,25 +1,19 @@
 <section class="skills">
   <div class="skills__container">
-    <h3 class="skills__title">Mis Habilidades</h3>
-    <p class="skills__text">Conoce las hablidades que manejo</p>
+    <h3 class="skills__title">{{ "SKILLS.title" | translate }}</h3>
+    <p class="skills__text">{{ "SKILLS.text" | translate }}</p>
+
 
     <div class="skills__containercards">
-      <app-skill-card
-        skillName="Angular"
-        skillScore="83"
-        skillImageUrl="assets/icons/angular.svg" />
-      <app-skill-card
-        skillName="React"
-        skillScore="80"
-        skillImageUrl="assets/icons/react.svg" />
-      <app-skill-card
-        skillName="Spring Boot"
-        skillScore="78"
-        skillImageUrl="assets/icons/springboot.svg" />
-      <app-skill-card
-        skillName="Docker"
-        skillScore="74"
-        skillImageUrl="assets/icons/docker.svg" />
+      @for(skill of skills; track skill.name){
+        <app-skill-card
+          [skillName]="skill.name"
+          [skillScore]="skill.rate"
+          [skillImageUrl]="skill.image_url" />
+      }@empty {
+        <li>No hay items...</li>
+      }
+
     </div>
   </div>
 </section>

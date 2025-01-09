@@ -1,38 +1,21 @@
+@use '../../../assets/styles/variables' as variables;
+@use '../../../assets/styles/mixins' as mixins;
 
-.resume {  
-    // background: #2a1454;
-    // background: #0f0715;
-    
-    background: #050709;
 
-    // background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(42,18,84,1) 100%);
-    // width: 100%;
-    
-    // width: 100%;
-    // background: #2a1454;
-    
+.resume {     
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-
-    // background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(42,18,84,1) 100%);
-    // height: 760px;  !al estableccer heigth se desborda en x
-    
-    // border: solid 1px red;
     width: 100%;
+    padding: 10px 0 20px 0;
 }
 
 .resume__container {
-    // margin: 20px auto;
-    // flex-basis: 1440px;
     display: flex;
     flex-flow: column wrap;
     align-content: center;
     width: 100%;
-    // max-width: 1440px;
     padding: 30px;
-
-    // border: solid 1px yellow;
 }
 
 .resume__title {
@@ -48,8 +31,7 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    background: #2a1454;
-    // background: #0f0715;
+    background: variables.color(purple-1);
     border-radius: 20px;
     margin: 0 0 40px;
     padding: 4px 6px;
@@ -57,9 +39,8 @@
 }
 
 .resume__item {
-    // flex-shrink: 1;
     font-size: 1.4rem;
-    color: #ffffff;
+    color: variables.color(white-1);
     font-weight: 500;
     padding: 6px 8px;
     cursor: pointer;
@@ -67,37 +48,30 @@
     background: transparent;
     transition: background 0.3s ease-out;
     &:hover {
-        background: #ffffff;
-        color: #2a1454;
+        background: variables.color(white-1);
+        color: variables.color(purple-1);
         
     }
 }
 
 .resume__containercards {
-    // flex-shrink: 1;
     display: flex;
     flex-flow: column nowrap;
     gap: 20px;
     width: 100%;
-    // margin: 0 0 40px 0;
 }
 
 .resume__card {
     flex-basis: 120px;
-    // flex: 1 1 300px;
-    // flex-shrink: 1;
-    // width: 100%;
     height: 250px;
-    // background: #2a1454;
-    background: #140c1c;
-
+    background: variables.color(dark-3);
     border-radius: 20px;
 }
 
-@media only screen and (width >= 768px) {
+@include mixins.tablet(){
     .resume {
         flex-flow: row nowrap;
-        padding: 30px;
+        padding: 40px 30px 50px;
         gap: 30px;
     }
 
@@ -111,7 +85,14 @@
 
     .resume__containercards {
         justify-content: center;
-        // flex-flow: row nowrap;
         width: 100%;
+    }
+}
+
+@include mixins.desktop-xl(){
+    .resume {
+        flex-flow: row nowrap;
+        padding: 60px 30px 60px;
+        gap: 30px;
     }
 }

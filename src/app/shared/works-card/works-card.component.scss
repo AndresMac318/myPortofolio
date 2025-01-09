@@ -1,3 +1,5 @@
+@use '../../../assets/styles/variables' as variables;
+@use '../../../assets/styles/mixins' as mixins;
 
 .workscard {
     position: relative;
@@ -11,10 +13,6 @@
     background-repeat: no-repeat;
     transition: background 400ms ease;
     border-radius: 10px;
-    
-    // box-shadow: 0 6.7px 5.3px rgba(0, 0, 0, 0.03), 0 22.3px 17.9px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
-    // box-shadow: 0 3.7px 5.3px rgba(166, 14, 237, 0.422), 0 22.3px 17.9px rgba(166, 14, 237, 0.05), 0 100px 80px rgba(166, 14, 237, 0.07);
-    
     box-shadow: 15px 5px 5.3px 0px rgb(20 12 28 / 88%), 0 22.3px 17.9px rgb(166 14 237 / 11%), 0 100px 80px rgb(166 14 237 / 2%);
 
     overflow: hidden;
@@ -26,7 +24,6 @@
             transform: translateY(0px);
         }
     }
-
 }
 
 .workscard__content {
@@ -44,23 +41,23 @@
 
 .workscard__title {
     font-size: 1.7rem;
-    color: #ffffff;
+    color: variables.color(white-1);
 } 
 
 .workscard__text {
     font-size: 1.1rem;
     letter-spacing: 0.5px;
-    color: #ffffff;
+    color: variables.color(white-1);
 }
 
-@media only screen and (width >= 580px) {
+@include mixins.tablet(){
     .workscard {
         width: 280px;
         max-width: 300px;
     }
 }
 
-@media only screen and (width >= 1330px) {
+@include mixins.desktop-xl(){
     .workscard {
         width: 340px;
         height: 180px;
@@ -71,5 +68,5 @@ img {
     height: 30px;
     width: 30px;
     transform: rotate(90deg);
-    color: #ffffff;
+    color: variables.color(white-1);
 }

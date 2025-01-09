@@ -1,0 +1,167 @@
+{
+    "NAVBAR": {
+        "MENU": {
+            "item1": "Home",
+            "item2": "Works",
+            "item3": "Resume",
+            "item4": "Skills",
+            "item5": "Contact"
+        }
+    },
+    "HOME": {
+        "name": "I'm Andrés",
+        "title": "FullStack",
+        "title2": "Web Developer",
+        "presentation": "I develop and implement solutions related to problems in the correct functioning of UX/UI flows and customer interaction in web applications with frontend and backend experience",
+        "download_txt": "Download CV"
+    },
+    "WORKS": {
+        "title": "Recent Works",
+        "menu": {
+            "item1": "All",
+            "item2": "Angular",
+            "item3": "SpringBoot"
+        },
+        "no_elements": "There are no items to show.",
+        "list": {
+            "maps": {
+                "id": 1,
+                "title": "Maps App",
+                "category": "Angular",
+                "description": "Project developed in Angular integrating maps with MapBox",
+                "urlImg": "/assets/img/angular-maps.png",
+                "repositoryLink": "https://github.com/AndresMac318/Angular-Maps"
+            },
+            "rankcv": {
+                "id": 2,
+                "title": "RankCV",
+                "category": "Angular",
+                "description": "Corporate homepage project, participation in the work team",
+                "urlImg": "/assets/img/angular-maps.png",
+                "repositoryLink": "https://github.com/AndresMac318/Angular-Maps"
+            },
+            "innoversoft": {
+                "id": 3,
+                "title": "Innoversoft",
+                "category": "Angular",
+                "description": "Corporate homepage project, participation in the work team",
+                "urlImg": "/assets/img/innoversoft-co.webp",
+                "repositoryLink": "https://github.com/AndresMac318/Angular-Maps"
+            },
+            "springboot": {
+                "id": 4,
+                "title": "API Rest - Books",
+                "category": "SpringBoot",
+                "description": "Project API Rest developed with SpringBoot 3 and MySQL, Docker, SpringSecurity",
+                "urlImg": "/assets/img/innoversoft-co.webp",
+                "repositoryLink": "https://github.com/AndresMac318/Books-API---Spring-Boot"
+            }
+        }
+    },
+    "RESUME": {
+        "title1": "Experience",
+        "title2": "Education",
+        "no_items": "There are not items.",
+        "EXPERIENCE": {
+            "datasistemas": {
+                "id": 1,
+                "date": "Oct, 2023",
+                "title": "Web developer",
+                "text": "Datasistemas"
+            },
+            "rankcv": {
+                "id": 2,
+                "date": "2022-2023",
+                "title": "Angular Developer",
+                "text": "RankCV"
+            },
+            "innoversoft": {
+                "id": 3,
+                "date": "2023",
+                "title": "Angular Developer",
+                "text": "InnoverSoft"
+            }
+        },
+        "EDUCATION": {
+            "engineering": {
+                "id": 1,
+                "date": "2018 - 2023",
+                "title": "Systems Engineer",
+                "text": "Universidad de Córdoba"
+            },
+            "springboot": {
+                "id": 2,
+                "date": "2024",
+                "title": "SRINGBOOT",
+                "text": "Udemy - Alfredo Leal"
+            },
+            "advance_angular": {
+                "id": 3,
+                "date": "2022",
+                "title": "ADVANCED ANGULAR",
+                "text": "Udemy - Fernando Herrera"
+            }
+        }
+    },
+    "SKILLS": {
+        "title": "Skills",
+        "text": "Know my skills",
+        "list": {
+           "item1": {
+                "name":"Angular", 
+                "rate":"83",
+                "image_url": "assets/icons/angular.svg"
+            },
+            "item2": {
+                "name": "React",
+                "rate":"80",
+                "image_url": "assets/icons/react.svg"
+            },
+            "item3": {
+                "name":"SpringBoot", 
+                "rate":"70",
+                "image_url": "assets/icons/springboot.svg"
+            },
+            "item4": {
+                "name": "Docker",
+                "rate":"75",
+                "image_url": "assets/icons/docker.svg"
+            }
+        }
+    },
+    "CONTACT": {
+        "FORM": {
+            "title": "¡Let's work together!",
+            "text": "With my knowledge and your ideas, let's discover great solutions!",
+            "name": "Fullname",
+            "email": "Email",
+            "cellphone": "Cellphone number",
+            "message": "Message",
+            "button_text": "Send",
+            "emailsent_ok": "Your message has been sent!",
+            "emailsent_bad": "Error in your message, has not been sent!"
+        },
+        "CARD": {
+            "title": "Click me!",
+            "list": {
+                "item1": {
+                    "name": "Cellphone number",
+                    "content": "+57 322 462 5438"
+                },
+                "item2": {
+                    "name": "Email",
+                    "content": "andres98belt@gmail.com"
+                },
+                "item3": {
+                    "name": "Country",
+                    "content": "Colombia"
+                }
+            }
+        }
+    },
+    "FOOTER":{
+        "text-1": "All Rights Reserved",
+        "text-2": "by Eng. Luis Andrés Macea"
+    }
+
+}

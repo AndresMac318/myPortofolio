@@ -1,15 +1,11 @@
+@use '../../../assets/styles/variables' as variables;
+@use '../../../assets/styles/mixins' as mixins;
+
 .works {
-  background: #0f0715;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-
-  // background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(42,18,84,1) 100%);
-  // height: 760px;  !al estableccer heigth se desborda en x
-
-  // border: solid 1px red;
   width: 100%;
-  // margin: auto;
 }
 
 .works__container {
@@ -19,7 +15,7 @@
   align-content: center;
   align-items: center;
   width: 100%;
-  padding: 30px;
+  padding: 40px 30px 50px;
 }
 
 .works__title {
@@ -44,7 +40,7 @@
 
 .works__item {
   font-size: 1.4rem;
-  color: #ffffff;
+  color: variables.color(white-1);
   font-weight: 500;
   padding: 6px 8px;
   cursor: pointer;
@@ -53,16 +49,16 @@
   background: transparent;
   transition: background 0.3s ease-out;
   &:hover {
-    background: #ffffff;
-    color: #2a1454;
+    background: variables.color(white-1);
+    color: variables.color(purple-1);
   }
   &:active {
-    background: #ffffff;
-    color: #2a1454;
+    background: variables.color(white-1);
+    color: variables.color(purple-1);
   }
   &:focus-within {
-    background: #ffffff;
-    color: #2a1454;
+    background: variables.color(white-1);
+    color: variables.color(purple-1);
   }
 }
 
@@ -73,8 +69,7 @@
   width: 100%;
 }
 
-@media only screen and (width >= 490px) {
-
+@include mixins.mobile(){
   .works__menu {
     margin: 0 auto 40px;
   }
@@ -85,8 +80,7 @@
   }
 }
 
-@media only screen and (width > 760px) {
-
+@include mixins.tablet(){
   .works__menu {
     margin: 0 auto 40px;
   }
@@ -94,11 +88,7 @@
   .works__containercards {
     justify-content: center;
     flex-flow: row wrap;
-    width: 100%;
+    width: 80%;
   }
 }
 
-
-@media only screen and (width > 1370px) {
-  
-}

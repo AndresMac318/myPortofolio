@@ -2,15 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./layout/header/header.component";
 import { FooterComponent } from './layout/footer/footer.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet, 
+    TranslateModule,
     HeaderComponent,
     FooterComponent,
-    
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -18,7 +19,14 @@ import { FooterComponent } from './layout/footer/footer.component';
 export default class AppComponent implements OnInit {
   title = 'myportfolio';
 
-  constructor( private activatedRoute: ActivatedRoute ){}
+  constructor( private activatedRoute: ActivatedRoute,
+    private translateSvc: TranslateService
+  ){
+    const langDefaultBrowser = this.translateSvc.getBrowserLang();
+    if(langDefaultBrowser !== undefined){
+      this.translateSvc.setDefaultLang(langDefaultBrowser);
+    }
+  }
 
   ngOnInit(): void {
     this.activatedRoute.fragment.subscribe((fragment: string | null) => {

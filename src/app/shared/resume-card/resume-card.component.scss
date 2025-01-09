@@ -1,49 +1,35 @@
+@use '../../../assets/styles/variables' as variables;
+
 .resumecard {
     flex-basis: 120px;
-    // flex: 1 1 300px;
-    // flex-shrink: 1;
-    // width: 100%;
-    // height: 250px;
-    // background: #2a1454;
-    background: #140c1c;
-    border: 1px solid #140c1c;
+    background: variables.color(dark-3);
+    border: 1px solid variables.color(dark-3);
     border-radius: 20px;
     padding: 20px 30px;
     transition: all 0.3s ease-in-out;
     
     &__time {
-        color: #8750f7;
+        color: variables.color(purple-2);
         font-size: 1.5rem;
         font-weight: 600;
         margin: 0 8px 0 0;
     }
     &__title{
-        color: #ffffff;
+        color: variables.color(white-1);
         font-size: 1.8rem;
         font-weight: 700;
         text-transform: uppercase;
     }
     &__text{
-        color: #dddddd;
+        color: variables.color(white-2);
         font-size: 1.6rem;
     }
 
    &:hover {
-    // background: linear-gradient(.25turn, #8750f7, #140c1c);
     background: linear-gradient(45deg, #8750f7, #140c1c);
-    border: 1px solid #8750f7;
+    border: 1px solid variables.color(purple-2);
     .resumecard__time {
-        color: #ffffff;
-    
+        color: variables.color(white-1);
     }
    }
 }
-
-/* .resumecard:hover {
-    background: linear-gradient(.25turn, #8750f7, #140c1c);
-    border: 1px solid #8750f7;
-    .resumecard__time {
-        color: #ffffff;
-    
-    }
-} */

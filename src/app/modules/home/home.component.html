@@ -1,10 +1,9 @@
 <section class="section">
   <div class="section__container">
     <div class="card">
-      <span class="card__subtitle">Soy Andrés</span>
+      <span class="card__subtitle">{{ "HOME.name" | translate }}</span>
       <h3 class="card__title">
-        Desarrollador Web <br />
-        FullStack
+        {{ "HOME.title" | translate }} <br/> {{ "HOME.title2" | translate }} 
       </h3>
       <figure>
         <img
@@ -13,9 +12,7 @@
           height="200" />
       </figure>
       <p class="card__text">
-        Desarrollo e implemento soluciones relacionadas a problemas con el
-        correcto funcionamiento de flujos UX/UI y la interacción de clientes en
-        aplicaciones web con experiencia en frontend y backend.
+        {{ "HOME.presentation" | translate }}
       </p>
 
       <div class="card__containerbtn">
@@ -23,7 +20,7 @@
           <a
             routerLink="/../../../assets/docs/CV - LUIS ANDRES MACEA.pdf"
             download="CV - Luis Andres Macea"
-            >Descargar CV</a
+            >{{ "HOME.download_txt" | translate }}</a
           >
           <svg
             xmlns="http://www.w3.org/2000/svg"

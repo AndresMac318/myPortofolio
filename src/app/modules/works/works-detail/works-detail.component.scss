@@ -1,19 +1,20 @@
+
+@use '../../../../assets/styles/variables' as variables;
+@use '../../../../assets/styles/mixins' as mixins;
+
 .worksdetail {
     &__header {
         position: relative;
         width: 100%;
         height: 150px;
-
-        // background-image: url('../../../../assets/img/macbook-wallpaper-sm.jpg');
         background-image: linear-gradient(rgb(49 6 83 / 75%), #2a145461), url('../../../../assets/img/macbook-wallpaper-sm.jpg');;
         background-repeat: no-repeat;
         background-position: 20% 90%;
         background-size: 105%;
-
     }
     &__title {
         font-size: 3rem;
-        color: #fff;    
+        color: variables.color(white-1);    
         position: absolute;
         top: 50%;
         left: 50%;
@@ -31,38 +32,29 @@
 .card__btnsocialnetwork {
     display: flex;
     justify-content: center;
-    
     align-items: center;
 
     height: 40px;
     width: 40px;
-    // padding: 8px 10px;
-    // margin-right: 20px;
     border-radius: 50%;
     background: transparent;
-    color: #8750f7;
-    border: solid #8750f7 1px;
+    color: variables.color(purple-2);
+    border: solid variables.color(purple-2) 1px;
     transition: background 0.3s;
 
-    /* a {
-        font: 400 1.5rem/15 sans-serif;
-        letter-spacing: 1px;
-        color: #8750f7;
-    } */
-
     &:hover {
-        color: #ffffff;
+        color: variables.color(white-1);
         font-weight: 600;
-        background: #8750f7;
+        background: variables.color(purple-2);
         cursor: pointer;
 
         a {
-            color: #ffffff;
+            color: variables.color(white-1);
         }
         
         svg {
             path {
-                fill: #ffffff;
+                fill: variables.color(white-1);
             }
         }
     }
@@ -77,7 +69,7 @@
         width: 100%;
         height: 220px;
         border-radius: 10px;
-        border: 1px solid #8750f7;
+        border: 1px solid variables.color(purple-2);
         margin: 0 0 20px;
     }
     &__info {
@@ -87,14 +79,14 @@
     &__title {
         font-size: 3rem;
         line-height: 1.2;
-        color: #ffffff;
+        color: variables.color(white-1);
         margin: 0 0 20px 0;
         width: 100%;
     }
     &__text {
         font-size: 1.4rem;
         line-height: 1.2;
-        color: #dddddd;
+        color: variables.color(white-2);
         margin: 0 0 20px 0;
     }
     &__list {
@@ -112,19 +104,19 @@
         justify-content: flex-start;
     }
     &__item {
-        color: #dddddd;
+        color: variables.color(white-2);
         margin: 0 8px;
         font-size: 1.6rem;
     }
     &__item--gray {
-        color: #ffffff;
+        color: variables.color(white-1);
         margin: 0 8px;
         font-size: 1.8rem;
     }
     &__item--tech {
-        color: #fff;
+        color: variables.color(white-1);
         background-color: transparent;
-        border: solid 1px #8750f7;
+        border: solid 1px variables.color(purple-2);
         border-radius: 20px;
         padding: 6px 10px;
         margin: 0 8px 10px;
@@ -139,7 +131,6 @@
             flex: 0 0 60%;
         }
         &__list {
-            //width: 25%;
             justify-content: space-evenly;
         }
     }

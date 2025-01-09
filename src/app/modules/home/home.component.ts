@@ -1,19 +1,14 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { RouterModule } from '@angular/router';
-
-import { HeaderComponent } from '../../layout/header/header.component';
-import { FooterComponent } from '../../layout/footer/footer.component';
-import WorksComponent from '../works/works.component';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     RouterModule,
-    HeaderComponent,
-    FooterComponent,
-    WorksComponent
+    TranslatePipe
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

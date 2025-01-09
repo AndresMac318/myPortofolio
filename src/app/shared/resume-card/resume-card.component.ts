@@ -2,7 +2,7 @@ import { Component, input } from '@angular/core';
 
 interface ResumeInfo {
   id: number;
-  time: string;
+  date: string;
   title: string;
   text: string;
 }

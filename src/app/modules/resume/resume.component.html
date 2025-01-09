@@ -1,24 +1,24 @@
 <section class="resume">
   <div class="resume__container">
-    <h3 class="resume__title">Mi Experiencia</h3>
+    <h3 class="resume__title">{{ "RESUME.title1" | translate }}</h3>
 
     <div class="resume__containercards">
       @for (item of experienceData; track item.id) {
         <app-resume-card [cardInfo]="item"></app-resume-card>
       } @empty {
-        <li>There are no items.</li>
+        <li>{{ "RESUME.no_items" | translate }}</li>
       }
     </div>
   </div>
 
   <div class="resume__container">
-    <h3 class="resume__title">Mi Educación</h3>
+    <h3 class="resume__title">{{ "RESUME.title2" | translate }}</h3>
 
     <div class="resume__containercards">
       @for (item of educationData; track item.id) {
         <app-resume-card [cardInfo]="item"></app-resume-card>
       } @empty {
-        <li>There are no items.</li>
+        <li>{{ "RESUME.no_items" | translate }}</li>
       }
     </div>
   </div>

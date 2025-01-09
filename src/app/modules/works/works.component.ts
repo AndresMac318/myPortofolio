@@ -1,79 +1,43 @@
 import { Component } from '@angular/core';
 import { WorksCardComponent } from '../../shared/works-card/works-card.component';
 import { Work } from '../models/works.model';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-works',
   standalone: true,
   imports: [
-    WorksCardComponent
+    WorksCardComponent,
+    TranslatePipe
   ],
   templateUrl: './works.component.html',
   styleUrl: './works.component.scss'
 })
 export default class WorksComponent {
 
-  public works: Work[] = [
-    {
-      id: 1,
-      title: 'Maps App',
-      category: 'Angular',
-      description: 'Proyecto desarrollado en Angular integrando mapas con MapBox',
-      urlImg: '/assets/img/angular-maps.png',
-      repositoryLink: 'https://github.com/AndresMac318/Angular-Maps',
-    },
-    {
-      id: 2,
-      title: 'RankCV',
-      category: 'SpringBoot',
-      description: 'Proyecto pagina principal corporativa, participación en el equipo de trabajo.',
-      urlImg: '/assets/img/angular-maps.png',
-      repositoryLink: 'https://github.com/AndresMac318/Angular-Maps',
-    },
-    {
-      id: 3,
-      title: 'Innoversoft',
-      category: 'Angular',
-      description: 'Proyecto LandingPage corporativa, participación en el equipo de trabajo.',
-      urlImg: '/assets/img/innoversoft-co.webp',
-      repositoryLink: 'https://github.com/AndresMac318/Angular-Maps',
-    },
-  ];
-  /* public worksFilter: Work[] = [
-    {
-      id: 1,
-      title: 'Maps App',
-      category: 'Angular',
-      description: 'Proyecto desarrollado en Angular integrando mapas con MapBox',
-      urlImg: '/assets/img/angular-maps.png',
-      repositoryLink: 'https://github.com/AndresMac318/Angular-Maps',
-    },
-    {
-      id: 2,
-      title: 'RankCV',
-      category: 'SpringBoot',
-      description: 'Proyecto pagina principal corporativa, participación en el equipo de trabajo.',
-      urlImg: '/assets/img/angular-maps.png',
-      repositoryLink: 'https://github.com/AndresMac318/Angular-Maps',
-    },
-    {
-      id: 3,
-      title: 'Innoversoft',
-      category: 'Angular',
-      description: 'Proyecto LandingPage corporativa, participación en el equipo de trabajo.',
-      urlImg: '/assets/img/innoversoft-co.webp',
-      repositoryLink: 'https://github.com/AndresMac318/Angular-Maps',
-    },
-  ]; */
-
+  public works: Work[] = [];
+  
   public worksFilter: Work[] = this.works;
 
-  filterworks(termino?: string){
-    console.log('filter',termino);
-    if (termino==='all') {
+  constructor(private translateSvc: TranslateService){
+    this.translateSvc.onLangChange.subscribe(() => this.chargeWorksList());
+
+    this.chargeWorksList();
+  }
+
+
+  chargeWorksList(){
+    this.translateSvc.get("WORKS.list").subscribe(res=>{
+      this.works = Object.values(res);
+      this.worksFilter = this.works;
+    });
+  }
+
+  filterworks(term?: string){
+    console.log('filter',term);
+    if (term==='all') {
       return this.worksFilter = this.works;
-      // return this.worksFilter = this.works;
     }
-    return this.worksFilter = this.works.filter((filter) => filter.category === termino);
+    return this.worksFilter = this.works.filter((filter) => filter.category === term);
   }
 }

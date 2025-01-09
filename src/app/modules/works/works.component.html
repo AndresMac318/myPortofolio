@@ -1,20 +1,22 @@
 <section class="works">
   <div class="works__container">
-    <h3 class="works__title">Mis Trabajos Recientes</h3>
+    <h3 class="works__title">{{"WORKS.title" | translate}}</h3>
     <div class="works__menu">
-      <button (click)="filterworks('all')" class="works__item">Todos</button>
+      <button (click)="filterworks('all')" class="works__item">
+        {{"WORKS.menu.item1" | translate}}
+      </button>
       <button (click)="filterworks('Angular')" class="works__item">
-        Angular
+        {{"WORKS.menu.item2" | translate}}
       </button>
       <button (click)="filterworks('SpringBoot')" class="works__item">
-        SpringBoot
+        {{"WORKS.menu.item3" | translate}}
       </button>
     </div>
     <div class="works__containercards">
       @for (work of worksFilter; track work.id) {
         <app-works-card [cardInfo]="work"></app-works-card>
       } @empty {
-        <p>No hay elementos que mostrar.</p>
+        <p>{{ "WORKS.no_elements" | translate }}</p>
       }
     </div>
   </div>

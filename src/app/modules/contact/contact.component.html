@@ -1,15 +1,15 @@
 <section class="contact">
   <div class="contact__container">
     <div class="contact__info">
-      <h3>Click me!</h3>
+      <h3>{{ "CONTACT.CARD.title" | translate }}</h3>
       <ul>
         <li>
           <div>
             <img src="../../../assets/icons/whatsapp.svg" alt="cellphone" />
           </div>
           <div>
-            <p>Celular</p>
-            <a href="tel:+57-322-462-5438">+57 322 462 5438</a>
+            <p>{{ "CONTACT.CARD.list.item1.name" | translate }}</p>
+            <a href="tel:+57-322-462-5438">{{ "CONTACT.CARD.list.item1.content" | translate }}</a>
           </div>
         </li>
         <li>
@@ -18,9 +18,9 @@
           </div>
 
           <div>
-            <p>Email</p>
+            <p>{{ "CONTACT.CARD.list.item2.name" | translate }}</p>
             <a href="mailto:andres98belt@gmail.com"
-              >andres98belt&#64;gmail.com</a
+              >{{ "CONTACT.CARD.list.item2.content" | translate }}</a
             >
           </div>
         </li>
@@ -29,9 +29,9 @@
             <img src="../../../assets/icons/location.svg" alt="" />
           </div>
           <div>
-            <p>País</p>
+            <p>{{ "CONTACT.CARD.list.item3.name" | translate }}</p>
             <a href="https://maps.app.goo.gl/XTzgBdj22GBUizaG6" target="_blank"
-              >Colombia</a
+              >{{ "CONTACT.CARD.list.item3.content" | translate }}</a
             >
           </div>
         </li>
@@ -43,28 +43,28 @@
       action="javascript:void(0)"
       [formGroup]="contactForm"
       (ngSubmit)="sendForm()">
-      <h3 class="contact__title">¡Trabajemos juntos!</h3>
+      <h3 class="contact__title">{{ "CONTACT.FORM.title" | translate }}</h3>
       <p class="contact__text">
-        Con mis habilidades y tus ideas descubramos grandiosas soluciones!
+        {{ "CONTACT.FORM.text" | translate }}
       </p>
       <input
         formControlName="name"
         name="name"
         class="contact__input"
         type="text"
-        placeholder="Nombres" />
+        [placeholder]="'CONTACT.FORM.name' | translate" />
       <input
         formControlName="email"
         name="email"
         class="contact__input"
         type="text"
-        placeholder="Email" />
+        [placeholder]="'CONTACT.FORM.email' | translate" />
       <input
         formControlName="cellphone"
         name="cellphone"
         class="contact__input"
         type="text"
-        placeholder="Nro. de celular" />
+        [placeholder]="'CONTACT.FORM.cellphone' | translate" />
       <textarea
         formControlName="message"
         name="message"
@@ -72,15 +72,15 @@
         type="text"
         style="height: auto"
         rows="3"
-        placeholder="Mensaje"></textarea>
-      <button class="contact__button" type="submit">Enviar</button>
+        [placeholder]="'CONTACT.FORM.message' | translate"></textarea>
+      <button class="contact__button" type="submit">{{ "CONTACT.FORM.button_text" | translate }}</button>
 
       @if (successSend) {
-        <p class="contact__message">Tu mensaje a sido enviado!</p>
+        <p class="contact__message">{{ "CONTACT.FORM.emailsent_ok" | translate }}</p>
       }
       @if (errorSend) {
         <p class="contact__message--error">
-          Error in your message, has not been sent!
+          {{ "CONTACT.FORM.emailsent_bad" | translate }}
         </p>
       }
       <!-- <p>Thank you for your message. It has been sent.</p> -->
