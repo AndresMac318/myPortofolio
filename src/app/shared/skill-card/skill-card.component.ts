@@ -1,7 +1,8 @@
-import { Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-skill-card',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [],
   templateUrl: './skill-card.component.html',

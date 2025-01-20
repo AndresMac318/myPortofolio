@@ -5,7 +5,7 @@
     <div>
       <h3 class="workscard__title">{{ cardInfo().title }}</h3>
       <p class="workscard__text">
-        {{ cardInfo().description }}
+        {{ cardInfo().description | slice: 0 : 100  }} ...
       </p>
     </div>
     <div>

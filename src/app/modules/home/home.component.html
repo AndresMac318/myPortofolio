@@ -6,22 +6,18 @@
         {{ "HOME.title" | translate }} <br/> {{ "HOME.title2" | translate }} 
       </h3>
       <figure>
-        <img
-          src="https://images.squarespace-cdn.com/content/v1/55677e68e4b0f08b0b268c57/1497729978516-ZL9YFJASIREKVLTBV39V/Matthew+Brennan+Podcast+Interview.png?format=500w"
+          <img
+          src="../../../assets/img/avatar.png"
           alt="Mi avatar"
-          height="200" />
+          height="250" />
       </figure>
       <p class="card__text">
         {{ "HOME.presentation" | translate }}
       </p>
 
       <div class="card__containerbtn">
-        <button class="card__btn">
-          <a
-            routerLink="/../../../assets/docs/CV - LUIS ANDRES MACEA.pdf"
-            download="CV - Luis Andres Macea"
-            >{{ "HOME.download_txt" | translate }}</a
-          >
+        <button class="card__btn" (click)="downloadCV()">
+          <a>{{ "HOME.download_txt" | translate }}</a>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24px"
@@ -84,26 +80,9 @@
               <path d="m3 7l9 6l9-6" />
             </g>
           </svg>
-          <!-- <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24">
-            <g
-              fill="currentColor"
-              stroke="white"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2">
-              <path
-                d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-              <path d="m3 7l9 6l9-6" />
-            </g>
-          </svg> -->
+          
         </a>
       </div>
     </div>
   </div>
 </section>
-
-<!-- <app-works id="works"></app-works> -->

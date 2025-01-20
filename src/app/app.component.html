@@ -1,54 +1,12 @@
-<!-- TODO: implementar loader -->
-<!-- 
-<div *ngIf="isLoading" class="loader-container">
-  <app-loader></app-loader>
-</div>
-<div *ngIf="!isLoading">
-  <app-header></app-header>
-  <router-outlet></router-outlet>
-  <app-footer></app-footer>
-</div>
 
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-}
-
-
-import { Component, OnInit } from '@angular/core';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent implements OnInit {
-  isLoading = true;
-
-  ngOnInit() {
-    // Simular tiempo de carga
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 2000); // Puedes ajustar el tiempo de carga simulado
-  }
-}
-
-
--->
-<div>
-  <nav>
+<div class="main-content">
+  <nav class="header-container">
     <app-header></app-header>
   </nav>
-  <main>
+  <main class="main-container">
     <router-outlet />
   </main>
-  <app-footer />
+  <div class="footer-container">
+    <app-footer/>
+  </div>
 </div>

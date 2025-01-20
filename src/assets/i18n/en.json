@@ -16,45 +16,57 @@
         "download_txt": "Download CV"
     },
     "WORKS": {
-        "title": "Recent Works",
+        "title": "Works",
         "menu": {
             "item1": "All",
             "item2": "Angular",
             "item3": "SpringBoot"
         },
+        "btn_text": "Back",
         "no_elements": "There are no items to show.",
+        "category": "Category",
+        "date": "Date",
+        "technologies": "Technologies",
         "list": {
             "maps": {
                 "id": 1,
                 "title": "Maps App",
                 "category": "Angular",
-                "description": "Project developed in Angular integrating maps with MapBox",
+                "description": "Project developed in Angular integrating an external map API (MapBox) to add geolocation, routing and marker setting functionalities to the web application.",
                 "urlImg": "/assets/img/angular-maps.png",
-                "repositoryLink": "https://github.com/AndresMac318/Angular-Maps"
+                "repositoryLink": "https://github.com/AndresMac318/Angular-Maps",
+                "date": "June, 2024",
+                "technologies": ["Angular", "Mobile First", "Mapbox", "Typescript", "CSS"]
             },
             "rankcv": {
                 "id": 2,
                 "title": "RankCV",
                 "category": "Angular",
-                "description": "Corporate homepage project, participation in the work team",
-                "urlImg": "/assets/img/angular-maps.png",
-                "repositoryLink": "https://github.com/AndresMac318/Angular-Maps"
+                "description": "Development of modules belonging to the main website, utilizing the Angular development framework, HTML, SCSS (BEM Methodology), TypeScript, Responsive Web Design (Mobile First), Multilingual.",
+                "urlImg": "/assets/img/rankcv.png",
+                "url": "https://www.rankcv.com/",
+                "date": "December, 2023",
+                "technologies": ["Angular", "Mobile First", "Angular Material", "Multilanguage i18n", "Typescript", "BEM Methodology", "SCSS"]
             },
             "innoversoft": {
                 "id": 3,
                 "title": "Innoversoft",
                 "category": "Angular",
-                "description": "Corporate homepage project, participation in the work team",
+                "description": "Development of modules for the main website (Partner) using the Angular development framework, HTML, SCSS (BEM Methodology), TypeScript, and Responsive Web Design.",
                 "urlImg": "/assets/img/innoversoft-co.webp",
-                "repositoryLink": "https://github.com/AndresMac318/Angular-Maps"
+                "url": "https://www.innoversoft.co/",
+                "date": "April, 2023",
+                "technologies": ["Angular", "Mobile First", "Angular Material", "Typescript", "CSS"]
             },
             "springboot": {
                 "id": 4,
                 "title": "API Rest - Books",
                 "category": "SpringBoot",
-                "description": "Project API Rest developed with SpringBoot 3 and MySQL, Docker, SpringSecurity",
-                "urlImg": "/assets/img/innoversoft-co.webp",
-                "repositoryLink": "https://github.com/AndresMac318/Books-API---Spring-Boot"
+                "description": "RestFull API project for library management developed with SpringBoot 3 and MySQL database, JPA, Lombok. In the security section Spring Security was used along with JWT and software testing using JUnit and Mockito. Software documentation was done using Swagger.",
+                "urlImg": "/assets/img/spring.webp",
+                "repositoryLink": "https://github.com/AndresMac318/Books-API---Spring-Boot",
+                "date": "April 19, 2024",
+                "technologies": ["Java", "Docker", "SpringBoot", "JPA", "SpringSecurity", "JWT", "Lombok", "MySQL", "JUnit", "Mockito", "Swagger"]
             }
         }
     },
@@ -139,7 +151,8 @@
             "message": "Message",
             "button_text": "Send",
             "emailsent_ok": "Your message has been sent!",
-            "emailsent_bad": "Error in your message, has not been sent!"
+            "emailsent_bad": "Error in your message, has not been sent!",
+            "requiredMessage": "Please verify that your email and cell phone number are valid, all fields are required!"
         },
         "CARD": {
             "title": "Click me!",

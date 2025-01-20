@@ -1,5 +1,5 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withComponentInputBinding } from '@angular/router';
 
 import { routes } from './app.routes';
 import { HttpClient, HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
@@ -8,7 +8,7 @@ import { translateLoaderFactory } from './core/utils/utils';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes),
+    provideRouter(routes, withComponentInputBinding()),
     provideHttpClient(withFetch()),
     importProvidersFrom([
       HttpClientModule, 

@@ -19,6 +19,7 @@ export default class ContactComponent implements OnInit {
 
   public successSend = false;
   public errorSend = false;
+  public requiredFields = false;
   
   public contactForm = this.formBuilder.group({
     name: ['', [Validators.required, Validators.minLength(3)]],
@@ -32,8 +33,12 @@ export default class ContactComponent implements OnInit {
   constructor(private formBuilder: NonNullableFormBuilder){}
 
   async sendForm(){
-    if (this.contactForm.invalid) {
-      return alert('Todos los datos son requiridos!');
+    if (this.contactForm.invalid) {      
+      this.requiredFields = true;
+
+      return setTimeout(() => {
+        this.requiredFields = false;
+      }, 3000);
     }
 
     emailjs.init('0hhfzyiN1jIolJwSe');
@@ -44,23 +49,19 @@ export default class ContactComponent implements OnInit {
       message: this.contactForm.value.message,
     });
     
-    console.log(this.contactForm.value);
-    
     if (response.status === 200) {
-      console.log('response 200:', response);
       this.successSend = true;
       setTimeout(()=>{
         this.successSend = false;
-      },3000);
+      }, 3000);
       
       return this.contactForm.reset();  
     }
 
-    console.log('bad response:', response)
     this.errorSend = true;
     setTimeout(()=>{
       this.successSend = false;
-    },3000);
+    }, 3000);
     
     return this.contactForm.reset();
     

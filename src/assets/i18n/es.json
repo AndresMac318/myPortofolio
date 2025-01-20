@@ -16,45 +16,57 @@
         "download_txt": "Descargar CV"
     },
     "WORKS": {
-        "title": "Trabajos Recientes",
+        "title": "Trabajos",
         "menu": {
             "item1": "Todo",
             "item2": "Angular",
             "item3": "SpringBoot"
         },
+        "btn_text": "Volver",
         "no_elements": "No hay elementos que mostrar.",
+        "category": "Categoría",
+        "date": "Fecha",
+        "technologies": "Tecnologías",
         "list": {
             "maps": {
                 "id": 1,
                 "title": "Maps App",
                 "category": "Angular",
-                "description": "Proyecto desarrollado en Angular integrando mapas con MapBox",
+                "description": "Proyecto desarrollado en Angular integrando una API externa de mapas (MapBox) para agregar funcionalidades de geolocalización, trazado de rutas y fijacion de marcadores en la aplicación web.",
                 "urlImg": "/assets/img/angular-maps.png",
-                "repositoryLink": "https://github.com/AndresMac318/Angular-Maps"
+                "repositoryLink": "https://github.com/AndresMac318/Angular-Maps",
+                "date": "Junio, 2024",
+                "technologies": ["Angular", "Mobile First", "Mapbox", "Typescript", "CSS"]
             },
             "rankcv": {
                 "id": 2,
                 "title": "RankCV",
                 "category": "Angular",
-                "description": "Proyecto pagina principal corporativa, participación en el equipo de trabajo",
-                "urlImg": "/assets/img/angular-maps.png",
-                "repositoryLink": "https://github.com/AndresMac318/Angular-Maps"
+                "description": "Desarrollo de módulos pertenecientes al sitio web principal, utilizando el Framework Angular, HTML, SCSS (Metodología BEM), TypeScript, Responsive Web Design (Mobile First), Aplicaciones Multilingüe.",
+                "urlImg": "/assets/img/rankcv.png",
+                "url": "https://www.rankcv.com/",
+                "date": "Diciembre, 2023",
+                "technologies": ["Angular", "Mobile First", "Angular Material", "Multilanguage i18n", "Typescript", "BEM Methodology", "SCSS"]
             },
             "innoversoft": {
                 "id": 3,
                 "title": "Innoversoft",
                 "category": "Angular",
-                "description": "Proyecto LandingPage corporativa, participación en el equipo de trabajo",
+                "description": "Desarrollo de módulos para el sitio web principal (Partner) utilizando el Framework Angular, HTML, SCSS (Metodología BEM), TypeScript y Responsive Web Design.",
                 "urlImg": "/assets/img/innoversoft-co.webp",
-                "repositoryLink": "https://github.com/AndresMac318/Angular-Maps"
+                "url": "https://www.innoversoft.co/",
+                "date": "Abril, 2023",
+                "technologies": ["Angular", "Mobile First", "Angular Material", "Typescript", "CSS"]
             },
             "springboot": {
                 "id": 4,
                 "title": "API Rest - Books",
                 "category": "SpringBoot",
-                "description": "Proyecto API Rest desarrollada con SpringBoot 3 y MySQL, Docker, SpringSecurity",
-                "urlImg": "/assets/img/innoversoft-co.webp",
-                "repositoryLink": "https://github.com/AndresMac318/Books-API---Spring-Boot"
+                "description": "Proyecto API RestFull de gestion de biblioteca desarrollado con SpringBoot 3 y base de datos MySQL, JPA, Lombok. En el apartado de seguridad se utilizó Spring Security junto a JWT y las pruebas del software usando JUnit y Mockito. La documentación del software se realizó usando Swagger.",
+                "urlImg": "/assets/img/spring.webp",
+                "repositoryLink": "https://github.com/AndresMac318/Books-API---Spring-Boot",
+                "date": "Abril 19, 2024",
+                "technologies": ["Java", "Docker", "SpringBoot", "JPA", "SpringSecurity", "JWT", "Lombok", "MySQL", "JUnit", "Mockito", "Swagger"]
             }
         }
     },
@@ -139,7 +151,8 @@
             "message": "Mensaje",
             "button_text": "Enviar",
             "emailsent_ok": "Tu mensaje ha sido enviado!",
-            "emailsent_bad": "Error en tu mensaje, no ha sido enviado!"
+            "emailsent_bad": "Error en tu mensaje, NO ha sido enviado!",
+            "requiredMessage": "Verifique que su email y nro. de celular sean válidos, todos los campos son requeridos!"
         },
         "CARD": {
             "title": "Clic aquí!",

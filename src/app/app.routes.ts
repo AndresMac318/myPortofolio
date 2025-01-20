@@ -14,7 +14,7 @@ export const routes: Routes = [
         loadComponent: () => import('./layout/main/main.component'),
     },
     {
-        path: 'works/:name', 
+        path: 'works/:title', 
         loadComponent: () => import('./modules/works/works-detail/works-detail.component')
     },
     {

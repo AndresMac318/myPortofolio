@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 interface ResumeInfo {
   id: number;
@@ -9,6 +9,7 @@ interface ResumeInfo {
 
 @Component({
   selector: 'app-resume-card',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [],
   templateUrl: './resume-card.component.html',

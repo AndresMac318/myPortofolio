@@ -75,6 +75,11 @@
         [placeholder]="'CONTACT.FORM.message' | translate"></textarea>
       <button class="contact__button" type="submit">{{ "CONTACT.FORM.button_text" | translate }}</button>
 
+      @if (requiredFields) {
+        <p class="contact__message--error">
+          {{ "CONTACT.FORM.requiredMessage" | translate }}
+        </p>
+      }
       @if (successSend) {
         <p class="contact__message">{{ "CONTACT.FORM.emailsent_ok" | translate }}</p>
       }
@@ -83,7 +88,6 @@
           {{ "CONTACT.FORM.emailsent_bad" | translate }}
         </p>
       }
-      <!-- <p>Thank you for your message. It has been sent.</p> -->
     </form>
   </div>
 </section>

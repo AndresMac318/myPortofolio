@@ -21,7 +21,6 @@ export default class WorksComponent {
 
   constructor(private translateSvc: TranslateService){
     this.translateSvc.onLangChange.subscribe(() => this.chargeWorksList());
-
     this.chargeWorksList();
   }
 
@@ -34,7 +33,6 @@ export default class WorksComponent {
   }
 
   filterworks(term?: string){
-    console.log('filter',term);
     if (term==='all') {
       return this.worksFilter = this.works;
     }

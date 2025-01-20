@@ -1,9 +1,10 @@
-import { Component, HostListener } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [
     RouterModule,
@@ -14,8 +15,6 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent {
 
-  //@ViewChild("navbar", {static: true}) navbar!: ElementRef;
-
   locales = [
     { value: 'es', name: 'ES' },
     { value: 'en', name: 'EN' },
@@ -24,14 +23,11 @@ export class HeaderComponent {
   navActive: boolean = false;
   
   get toggle(){
-    console.log(this.navActive);
-    
     return (this.navActive) ? 'nav__menu--active' : 'nav__menu';
   }
 
   constructor(private translateSvc: TranslateService){
     this.translateSvc.use('es');
-    //this.checkScreenWidth();
   }
 
   changeLanguage(event: Event){
@@ -40,19 +36,6 @@ export class HeaderComponent {
       this.translateSvc.use(changeEvent.value);
     }
   }
-   
-  /* @HostListener('window:resize')
-  onResize(){
-    this.checkScreenWidth();
-  } */
-  
-  /* checkScreenWidth(){
-    console.log('checkScreenWidth');
-    
-    if(window.innerWidth >= 768){
-      this.navActive = false;
-    }
-  } */
 
   public toggleMenu(){
     this.navActive = !this.navActive;    

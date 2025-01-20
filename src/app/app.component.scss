@@ -1,16 +1,15 @@
-/* .content {
+
+.main-content{
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
-    main {
-        flex: 1 0;
-    }
-    app-footer {
-        flex: 0;
-    }
+    height: 100vh !important;
 }
-app-header{
-    position: static;
-    width: 100%;
-    z-index: 333;
-} */
+.header-container {
+    flex: 0 0;
+}
+.main-container {
+    flex: 1 1;
+}
+.footer-container {
+    flex: 0 0;
+}
