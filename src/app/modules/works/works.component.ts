@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { WorksCardComponent } from '../../shared/works-card/works-card.component';
 import { Work } from '../models/works.model';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
@@ -13,7 +13,9 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
   templateUrl: './works.component.html',
   styleUrl: './works.component.scss'
 })
-export default class WorksComponent {
+export default class WorksComponent implements AfterViewInit {
+
+  @ViewChild('angButton') angButton!: ElementRef<HTMLButtonElement>;
 
   public works: Work[] = [];
   
@@ -24,6 +26,11 @@ export default class WorksComponent {
     this.chargeWorksList();
   }
 
+  ngAfterViewInit(): void {
+    const btn = this.angButton.nativeElement;
+    btn.click();
+    btn.focus();
+  }
 
   chargeWorksList(){
     this.translateSvc.get("WORKS.list").subscribe(res=>{

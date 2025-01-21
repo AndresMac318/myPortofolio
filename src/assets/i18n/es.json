@@ -28,8 +28,19 @@
         "date": "Fecha",
         "technologies": "Tecnologías",
         "list": {
-            "maps": {
+            "portfolio": {
                 "id": 1,
+                "title": "Portfolio",
+                "category": "Angular",
+                "description": "Proyecto de portafolio personal desarrollado en Angular utilizado para mostrar mis competencias y habilidades como desarrollador, así como para mostrar mis desarrollos de software más recientes, se aplicaron metodologías y buenas practicas de desarrollo web como el desarrollo usando Mobile First, BEM Metodology, Multilanguage i18n y estilos con SCSS.",
+                "urlImg": "/assets/img/myportfolio.png",
+                "repositoryLink": "https://github.com/AndresMac318/myPortofolio",
+                "date": "Enero, 2025",
+                "url": "https://luis-macea-dev.netlify.app/",
+                "technologies": ["Angular", "Mobile First", "BEM Methodology", "Multilanguage i18n", "Typescript", "SCSS"]
+            },
+            "maps": {
+                "id": 2,
                 "title": "Maps App",
                 "category": "Angular",
                 "description": "Proyecto desarrollado en Angular integrando una API externa de mapas (MapBox) para agregar funcionalidades de geolocalización, trazado de rutas y fijacion de marcadores en la aplicación web.",
@@ -39,7 +50,7 @@
                 "technologies": ["Angular", "Mobile First", "Mapbox", "Typescript", "CSS"]
             },
             "rankcv": {
-                "id": 2,
+                "id": 3,
                 "title": "RankCV",
                 "category": "Angular",
                 "description": "Desarrollo de módulos pertenecientes al sitio web principal, utilizando el Framework Angular, HTML, SCSS (Metodología BEM), TypeScript, Responsive Web Design (Mobile First), Aplicaciones Multilingüe.",
@@ -49,7 +60,7 @@
                 "technologies": ["Angular", "Mobile First", "Angular Material", "Multilanguage i18n", "Typescript", "BEM Methodology", "SCSS"]
             },
             "innoversoft": {
-                "id": 3,
+                "id": 4,
                 "title": "Innoversoft",
                 "category": "Angular",
                 "description": "Desarrollo de módulos para el sitio web principal (Partner) utilizando el Framework Angular, HTML, SCSS (Metodología BEM), TypeScript y Responsive Web Design.",
@@ -59,7 +70,7 @@
                 "technologies": ["Angular", "Mobile First", "Angular Material", "Typescript", "CSS"]
             },
             "springboot": {
-                "id": 4,
+                "id": 5,
                 "title": "API Rest - Books",
                 "category": "SpringBoot",
                 "description": "Proyecto API RestFull de gestion de biblioteca desarrollado con SpringBoot 3 y base de datos MySQL, JPA, Lombok. En el apartado de seguridad se utilizó Spring Security junto a JWT y las pruebas del software usando JUnit y Mockito. La documentación del software se realizó usando Swagger.",

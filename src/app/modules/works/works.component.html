@@ -5,7 +5,7 @@
       <button (click)="filterworks('all')" class="works__item">
         {{"WORKS.menu.item1" | translate}}
       </button>
-      <button (click)="filterworks('Angular')" class="works__item">
+      <button #angButton (click)="filterworks('Angular')" class="works__item">
         {{"WORKS.menu.item2" | translate}}
       </button>
       <button (click)="filterworks('SpringBoot')" class="works__item">
