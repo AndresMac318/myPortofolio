@@ -1,9 +1,13 @@
-@use '../../../assets/styles/variables' as variables;
+@use '../../../../assets/styles/variables' as variables;
 
 .skills__card {
     width: 180px;
     border-radius: 20px;
     text-align: center;
+
+    animation: appear 4s linear;
+    animation-timeline: view();
+    animation-range: entry 30% cover 40%;
 }
 
 .skills__iconcontainer {

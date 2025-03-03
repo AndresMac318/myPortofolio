@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
@@ -20,10 +20,10 @@ export class HeaderComponent {
     { value: 'en', name: 'EN' },
   ]
   
-  navActive: boolean = false;
+  navActive = signal(false);
   
   get toggle(){
-    return (this.navActive) ? 'nav__menu--active' : 'nav__menu';
+    return (this.navActive()) ? 'nav__menu--active' : 'nav__menu';
   }
 
   constructor(private translateSvc: TranslateService){
@@ -38,6 +38,6 @@ export class HeaderComponent {
   }
 
   public toggleMenu(){
-    this.navActive = !this.navActive;    
+    this.navActive.set(!this.navActive());
   }
 }

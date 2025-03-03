@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SkillCardComponent } from '../../shared/skill-card/skill-card.component';
+import { SkillCardComponent } from '../../shared/components/skill-card/skill-card.component';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 interface SkillInfo {

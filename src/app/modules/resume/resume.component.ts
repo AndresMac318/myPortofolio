@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ResumeCardComponent } from '../../shared/resume-card/resume-card.component';
+import { ResumeCardComponent } from '../../shared/components/resume-card/resume-card.component';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 

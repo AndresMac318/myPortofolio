@@ -1,4 +1,4 @@
-@use '../../../assets/styles/variables' as variables;
+@use '../../../../assets/styles/variables' as variables;
 
 .resumecard {
     flex-basis: 120px;
@@ -7,6 +7,10 @@
     border-radius: 20px;
     padding: 20px 30px;
     transition: all 0.3s ease-in-out;
+
+    animation: appear 4s linear;
+    animation-timeline: view();
+    animation-range: entry 30% cover 40%;
     
     &__time {
         color: variables.color(purple-2);

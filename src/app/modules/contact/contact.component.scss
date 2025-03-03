@@ -17,6 +17,9 @@
 }
 
 .contact__info {
+    animation: appear 4s linear;
+    animation-timeline: view();
+    animation-range: entry 30% cover 40%;
     h3 {
         font-size: 3rem;
         color: variables.color(white-1);
@@ -96,6 +99,10 @@
     width: 100%;
     border-radius: 20px;
     padding: 20px 20px 0;
+
+    animation: appear 4s linear;
+    animation-timeline: view();
+    animation-range: entry 30% cover 40%;
 }
 
 .contact__input {

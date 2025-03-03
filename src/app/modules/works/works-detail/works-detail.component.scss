@@ -151,6 +151,10 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-start;
+
+        animation: appear 2s linear;
+        animation-timeline: view();
+        animation-range: entry 25% cover 25%;
     }
     &__item {
         color: variables.color(white-2);
@@ -178,7 +182,7 @@
     .content{
         display: flex;
         flex-flow: row wrap;
-        padding: 20px;
+        padding: 40px 40px 12vh;
         justify-content: flex-start;
         &__image {
             width: 50%;
@@ -200,7 +204,6 @@
 
 @include mixins.desktop(){
     .content{
-        padding: 40px;
         &__info {
             margin: 0 0 0 20px;
         }

@@ -1,7 +1,7 @@
 @use '../../../assets/styles/variables' as variables;
 @use '../../../assets/styles/mixins' as mixins;
 
-.works {
+.section {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -15,7 +15,7 @@
   align-content: center;
   align-items: center;
   width: 100%;
-  padding: 40px 30px 50px;
+  padding: 30px 20px 70px;
 }
 
 .works__title {
@@ -60,6 +60,11 @@
     background: variables.color(white-1);
     color: variables.color(purple-1);
   }
+}
+
+.works__itemActive {
+  background: variables.color(white-1);
+  color: variables.color(purple-1);
 }
 
 .works__containercards {

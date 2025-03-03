@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
-import { Work } from '../../modules/models/works.model';
 import { Router } from '@angular/router';
 import { SlicePipe } from '@angular/common';
+import { Work } from '../../../core/models/works.model';
 
 @Component({
   selector: 'app-works-card',

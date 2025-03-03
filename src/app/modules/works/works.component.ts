@@ -1,7 +1,20 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { WorksCardComponent } from '../../shared/works-card/works-card.component';
-import { Work } from '../models/works.model';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Work } from '../../core/models/works.model';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { WorksCardComponent } from '../../shared/components/works-card/works-card.component';
+
+interface MenuItem {
+  id: string;
+  name: string;
+  isActive: boolean;
+}
+
+interface MenuItemRaw {
+  id: string;
+  name: string;
+  isActive: string;
+}
+
 
 @Component({
   selector: 'app-works',
@@ -13,23 +26,33 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
   templateUrl: './works.component.html',
   styleUrl: './works.component.scss'
 })
-export default class WorksComponent implements AfterViewInit {
-
-  @ViewChild('angButton') angButton!: ElementRef<HTMLButtonElement>;
+export default class WorksComponent implements OnInit, AfterViewInit {
 
   public works: Work[] = [];
   
   public worksFilter: Work[] = this.works;
+
+  public menuItems: MenuItem[] = [];
 
   constructor(private translateSvc: TranslateService){
     this.translateSvc.onLangChange.subscribe(() => this.chargeWorksList());
     this.chargeWorksList();
   }
 
+  ngOnInit(): void {
+    this.translateSvc.get('WORKS.menu').subscribe(res => {
+      this.menuItems = Object.values(res).map(item => {
+        const menuItem = item as MenuItemRaw;
+        return {
+          ...menuItem,
+          isActive: menuItem.isActive === 'true'
+        } as MenuItem;
+      });
+    });
+  }
+
   ngAfterViewInit(): void {
-    const btn = this.angButton.nativeElement;
-    btn.click();
-    btn.focus();
+    this.filterworks('All');
   }
 
   chargeWorksList(){
@@ -40,7 +63,12 @@ export default class WorksComponent implements AfterViewInit {
   }
 
   filterworks(term?: string){
-    if (term==='all') {
+    this.menuItems = this.menuItems.map(item => ({
+      ...item,
+      isActive: item.name === term
+    }));
+    
+    if (term==='All') {
       return this.worksFilter = this.works;
     }
     return this.worksFilter = this.works.filter((filter) => filter.category === term);

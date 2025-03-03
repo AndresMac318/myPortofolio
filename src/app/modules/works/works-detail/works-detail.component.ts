@@ -1,6 +1,6 @@
 import { Component, inject, Input, OnInit } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { Work } from '../../models/works.model';
+import { Work } from '../../../core/models/works.model';
 import { Location } from '@angular/common';
 
 @Component({
