@@ -28,8 +28,18 @@
         "date": "Date",
         "technologies": "Technologies",
         "list": {
-            "portfolio": {
+            "webmarket": {
                 "id": 1,
+                "title": "Web Market",
+                "category": "Angular",
+                "description": "Personal project based on a modern, scalable and professional electronic commerce application, designed with Angular V19. Developed as part of my learning process to explore Advanced Fronnd Architectures and workflows, used to show my skills and skills as a developer, app developed under hexagonal architecture, technologies such as Angular 19, NGRX, Material Angular, Signals, Effects, RXJS, NGX-Translate, HTTP Client, etc.",
+                "urlImg": "/assets/img/webmarket.png",
+                "repositoryLink": "https://github.com/AndresMac318/ecommerce-app",
+                "date": "June, 2025",
+                "technologies": ["Angular", "Hexagonal Arquitecture", "Docker", "Docker compose", "NgRx", "RxJS", "Signals", "Effects", "Jasmine", "Karma", "Mobile First", "BEM Methodology", "Nginx", "Multilanguage i18n", "Typescript", "SCSS"]
+            },
+            "portfolio": {
+                "id": 2,
                 "title": "Portfolio",
                 "category": "Angular",
                 "description": "Personal portfolio project developed in Angular used to show my competences and skills as a developer, as well as to show my most recent software developments, methodologies and best practices of web development were applied such as development using Mobile First, BEM Methodology, Multilanguage i18n and styles with SCSS.",
@@ -40,7 +50,7 @@
                 "technologies": ["Angular", "Mobile First", "BEM Methodology", "Multilanguage i18n", "Typescript", "SCSS"]
             },
             "maps": {
-                "id": 2,
+                "id": 3,
                 "title": "Maps App",
                 "category": "Angular",
                 "description": "Project developed in Angular integrating an external map API (MapBox) to add geolocation, routing and marker setting functionalities to the web application.",
@@ -50,7 +60,7 @@
                 "technologies": ["Angular", "Mobile First", "Mapbox", "Typescript", "CSS"]
             },
             "rankcv": {
-                "id": 3,
+                "id": 4,
                 "title": "RankCV",
                 "category": "Angular",
                 "description": "Development of modules belonging to the main website, utilizing the Angular development framework, HTML, SCSS (BEM Methodology), TypeScript, Responsive Web Design (Mobile First), Multilingual.",
@@ -60,7 +70,7 @@
                 "technologies": ["Angular", "Mobile First", "Angular Material", "Multilanguage i18n", "Typescript", "BEM Methodology", "SCSS"]
             },
             "innoversoft": {
-                "id": 4,
+                "id": 5,
                 "title": "Innoversoft",
                 "category": "Angular",
                 "description": "Development of modules for the main website (Partner) using the Angular development framework, HTML, SCSS (BEM Methodology), TypeScript, and Responsive Web Design.",
@@ -70,7 +80,7 @@
                 "technologies": ["Angular", "Mobile First", "Angular Material", "Typescript", "CSS"]
             },
             "springboot": {
-                "id": 5,
+                "id": 6,
                 "title": "API Rest - Books",
                 "category": "SpringBoot",
                 "description": "RestFull API project for library management developed with SpringBoot 3 and MySQL database, JPA, Lombok. In the security section Spring Security was used along with JWT and software testing using JUnit and Mockito. Software documentation was done using Swagger.",
